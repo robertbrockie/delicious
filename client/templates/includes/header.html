@@ -8,17 +8,23 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{{pathFor 'postsList'}}">Robert Brockie's Delicious</a>
+        <a class="navbar-brand" href="{{pathFor 'home'}}">Robert Brockie's Delicious</a>
       </div>
       <ul class="nav navbar-nav">
-          {{#if currentUser}}
+        <li>
+          <a href="{{pathFor 'newPosts'}}">New</a>
+        </li>
+        <li>
+          <a href="{{pathFor 'bestPosts'}}">Best</a>
+        </li>
+        {{#if currentUser}}
             <li>
               <a href="{{pathFor 'postSubmit'}}">Submit Post</a>
             </li>
             <li class="dropdown">
               {{> notifications}}
             </li>
-          {{/if}}
+        {{/if}}
         </ul>
       <div class="collapse navbar-collapse" id="navigation">
         <ul class="nav navbar-nav navbar-right">
